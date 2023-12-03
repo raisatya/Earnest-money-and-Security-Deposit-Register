@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31205.134
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSC_WPF_BETA", "MSC_WPF_BETA.csproj", "{BF66ADB1-79AE-483A-8E38-79A297E3FF67}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Earnest Money and Security Deposit Register", "..\Earnest Money and Security Deposit Register\Earnest Money and Security Deposit Register.vdproj", "{B8179587-9FF5-4ADE-9E97-A89CE9461791}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BF66ADB1-79AE-483A-8E38-79A297E3FF67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF66ADB1-79AE-483A-8E38-79A297E3FF67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF66ADB1-79AE-483A-8E38-79A297E3FF67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF66ADB1-79AE-483A-8E38-79A297E3FF67}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8179587-9FF5-4ADE-9E97-A89CE9461791}.Debug|Any CPU.ActiveCfg = Debug
+		{B8179587-9FF5-4ADE-9E97-A89CE9461791}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7523B7FC-2905-40B1-9BCD-D45CE0C5AFBC}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,122 @@
+﻿<Window x:Class="MSC_WPF_BETA.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MSC_WPF_BETA"
+        mc:Ignorable="d"
+        Title="Earnest Money and Security Deposit Register - Authentication" Height="420" Width="420" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" HorizontalAlignment="Stretch" WindowState="Normal" WindowStyle="None" Background="White" Loaded="Window_Loaded" Icon="finalIcon.ico">
+    <Grid>
+        <Grid x:Name="logInGrid" HorizontalAlignment="Center" Height="400" VerticalAlignment="Top" Width="400" Margin="0,10,0,0" Background="White">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="189*"/>
+                <RowDefinition Height="190*"/>
+            </Grid.RowDefinitions>
+            <Grid x:Name="logInGrid1" HorizontalAlignment="Left" Height="300" Margin="25,80,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="350" Background="White">
+                <Label x:Name="logInlabel" Content="Log In" HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="130" FontSize="30" FontWeight="Normal" Margin="20,15,0,0" Foreground="#FF292B2C"/>
+                <Label x:Name="errorLabel1" Content="Please fill in all the fields*" HorizontalAlignment="Left" Height="30" Margin="110,60,0,0" VerticalAlignment="Top" Width="217" Background="{x:Null}" Foreground="#FFD9534F" FontSize="14" Visibility="Hidden"/>
+                <TextBox x:Name="logInTB1UserId" HorizontalAlignment="Left" Margin="110,90,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="220" Height="30" BorderThickness="0,0,0,2" CharacterCasing="Upper" FontStyle="Normal" RenderTransformOrigin="0.504,0.5" BorderBrush="#FF484848" Foreground="#FF585858" FontSize="16" TabIndex="1">
+                    <TextBox.Background>
+                        <SolidColorBrush Color="White" Opacity="1"/>
+                    </TextBox.Background>
+                </TextBox>
+                <Label Content="User Id" HorizontalAlignment="Left" Height="31" Margin="20,90,0,0" VerticalAlignment="Top" Width="59" Foreground="#FF585858" FontSize="16"/>
+                <Label Content="Password" HorizontalAlignment="Left" Height="31" Margin="20,140,0,0" VerticalAlignment="Top" Width="75" Foreground="#FF585858" FontSize="16" Grid.RowSpan="2"/>
+                <Button x:Name="signInlinkButton" Content="Create an account instead" HorizontalAlignment="Left" Margin="20,195,0,0" VerticalAlignment="Top" Width="170" Height="30" Foreground="#FF0275D8" FontSize="14" Grid.Row="1" Click="signInlinkButton_Click" TabIndex="3">
+                    <Button.Background>
+                        <SolidColorBrush Color="#FFEEF4F9" Opacity="0"/>
+                    </Button.Background>
+                    <Button.BorderBrush>
+                        <SolidColorBrush Color="#FF707070" Opacity="0"/>
+                    </Button.BorderBrush>
+                </Button>
+                <Button x:Name="logInButton" Content="Log In" HorizontalAlignment="Left" Margin="250,250,0,0" VerticalAlignment="Top" Width="80" Height="30" Background="#FF0275D8" Foreground="#FFF7F7F7" FontSize="14" Grid.Row="1" Click="logInButton_Click" TabIndex="4">
+                    <Button.BorderBrush>
+                        <SolidColorBrush Color="#FF707070" Opacity="0"/>
+                    </Button.BorderBrush>
+                </Button>
+                <Button x:Name="exitButton" Content="Exit" HorizontalAlignment="Left" Margin="165,250,0,0" VerticalAlignment="Top" Width="80" Height="30" Foreground="#FF585858" FontSize="14" Grid.Row="1" Click="exitButton2_Click" TabIndex="5">
+                    <Button.Background>
+                        <SolidColorBrush Color="#FFEEF4F9" Opacity="0"/>
+                    </Button.Background>
+                    <Button.BorderBrush>
+                        <SolidColorBrush Color="#FF707070" Opacity="0"/>
+                    </Button.BorderBrush>
+                </Button>
+                <PasswordBox x:Name="logInPB1Password" HorizontalAlignment="Left" Height="30" Margin="110,140,0,0" VerticalAlignment="Top" Width="220" FontSize="14" BorderThickness="0,0,0,2" Background="{x:Null}" BorderBrush="#FF484848" Foreground="#FF585858" TabIndex="2"/>
+            </Grid>
+
+            <Label Content="" HorizontalAlignment="Left" Height="65" Margin="44,10,0,0" VerticalAlignment="Top" Width="63">
+                <Label.Background>
+                    <ImageBrush ImageSource="Nbu-Logo.jpg" Stretch="Uniform"/>
+                </Label.Background>
+            </Label>
+            <Label Content="Earnest Money and Security Deposit" HorizontalAlignment="Left" Height="30" Margin="120,5,0,0" VerticalAlignment="Top" Width="240" FontSize="14" FontFamily="Segoe UI Semibold"/>
+            <Label Content="Register" HorizontalAlignment="Left" Height="30" Margin="120,25,0,0" VerticalAlignment="Top" Width="125" FontSize="14" FontFamily="Segoe UI Semibold"/>
+            <Label Content="NORTH   BENGAL   UNIVERSITY" HorizontalAlignment="Left" Height="30" Margin="120,49,0,0" VerticalAlignment="Top" Width="240" FontSize="16" FontFamily="Segoe UI Semibold" Foreground="#FF4885ED"/>
+            <Grid x:Name="selectionGrid" HorizontalAlignment="Left" Height="300" Margin="25,80,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="350" Background="White" Visibility="Hidden">
+                <Label x:Name="accountTypeLabel" Content="Choose Account Type" Height="50" VerticalAlignment="Top" Width="242" FontSize="24" FontWeight="Normal" Margin="0,30,0,0" Foreground="#FF292B2C" FontFamily="Segoe UI Symbol"/>
+                <Button x:Name="adminButton2" Content="ADMIN" Height="26" Margin="0,170,150,0" VerticalAlignment="Top" Width="70" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="Black" FontFamily="Segoe UI Semibold" FontSize="14" Cursor="Hand" Click="adminButton2_Click"/>
+                <Button x:Name="userButton2" Content="USER" Height="26" Margin="150,170,0,0" VerticalAlignment="Top" Width="70" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="Black" FontFamily="Segoe UI Semibold" FontSize="14" Cursor="Hand" Click="userButton2_Click"/>
+                <Button x:Name="logInlinkButton3" Content="Back to login" Margin="0,230,0,0" VerticalAlignment="Top" Width="100" Height="30" Foreground="#FF4885ED" FontSize="14" TabIndex="4" Click="logInlinkButton2_Click" FontFamily="Segoe WP Semibold" BorderThickness="2">
+                    <Button.Background>
+                        <SolidColorBrush Color="#FFEEF4F9" Opacity="0"/>
+                    </Button.Background>
+                    <Button.BorderBrush>
+                        <SolidColorBrush Color="#FF0275D8"/>
+                    </Button.BorderBrush>
+                </Button>
+                <Label Content="" Height="70" Margin="0,100,150,0" VerticalAlignment="Top" Width="70" Foreground="{x:Null}">
+                    <Label.Background>
+                        <ImageBrush ImageSource="icons8-microsoft-admin-100.png"/>
+                    </Label.Background>
+                </Label>
+                <Label Content="" Height="70" Margin="150,100,0,0" VerticalAlignment="Top" Width="70" Foreground="{x:Null}">
+                    <Label.Background>
+                        <ImageBrush ImageSource="icons8-male-user-100.png"/>
+                    </Label.Background>
+                </Label>
+            </Grid>
+            <Grid x:Name="signUpGrid1" HorizontalAlignment="Left" Height="300" Margin="25,80,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="350" Background="White" Visibility="Hidden">
+                <Label x:Name="signUplabel" Content="Sign Up" HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="130" FontSize="30" FontWeight="Normal" Margin="19,15,0,0" Foreground="#FF292B2C"/>
+                <PasswordBox x:Name="securityKeyPB" HorizontalAlignment="Left" Height="30" Margin="25,125,0,0" VerticalAlignment="Top" Width="310" BorderBrush="#FF484848" BorderThickness="0,0,0,2" FontSize="14" TabIndex="1"/>
+                <Label Content="Please provide the security key" HorizontalAlignment="Left" Height="35" Margin="20,90,0,0" VerticalAlignment="Top" Width="237" Foreground="#FF585858" FontSize="16"/>
+                <Button x:Name="logInlinkButton" Content="Back to login" HorizontalAlignment="Left" Margin="20,185,0,0" VerticalAlignment="Top" Width="90" Height="30" Foreground="#FF0275D8" FontSize="14" Click="logInlinkButton2_Click" TabIndex="2">
+                    <Button.Background>
+                        <SolidColorBrush Color="#FFEEF4F9" Opacity="0"/>
+                    </Button.Background>
+                    <Button.BorderBrush>
+                        <SolidColorBrush Color="#FF707070" Opacity="0"/>
+                    </Button.BorderBrush>
+                </Button>
+                <Button x:Name="signUpButton1" Content="Continue" HorizontalAlignment="Left" Height="30" Margin="245,245,0,0" VerticalAlignment="Top" Width="90" Background="#FF0275D8" BorderBrush="{x:Null}" Foreground="#FFF7F7F7" Click="signUpButton1_Click" TabIndex="3"/>
+                <Label x:Name="errorLabel2" Content="Incorrect security key*" HorizontalAlignment="Left" Height="30" Margin="20,160,0,0" VerticalAlignment="Top" Width="308" FontSize="14" Foreground="#FFD9534F" Visibility="Hidden"/>
+
+            </Grid>
+            <Grid x:Name="signUpGrid2" HorizontalAlignment="Left" Height="300" Margin="25,80,0,0" VerticalAlignment="Top" Width="350" Background="White" Grid.RowSpan="2" Visibility="Hidden">
+                <Label x:Name="signingInLabel" Content="Please wait, signing in..." Margin="0,249,0,0" Grid.Row="1" VerticalAlignment="Top" Foreground="#FF0275D8" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="16" Visibility="Hidden"/>
+
+                <Label x:Name="signUplabel1" Content="Sign Up" HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="130" FontSize="30" FontWeight="Normal" Margin="19,15,0,0" Foreground="#FF292B2C"/>
+                <Button x:Name="SignupButton" Content="Create Account" HorizontalAlignment="Left" Height="30" Margin="205,250,0,0" VerticalAlignment="Top" Width="125" Click="SignupButton_Click" Visibility="Visible" Background="#FF0275D8" Foreground="#FFF7F7F7" BorderBrush="{x:Null}" FontSize="14" TabIndex="5"/>
+                <TextBox x:Name="signUpTBUserId" HorizontalAlignment="Left" Height="30" Margin="110,90,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="220" BorderThickness="0,0,0,2" FontSize="14" TabIndex="1" CharacterCasing="Upper"/>
+                <TextBox x:Name="signUpTBName" HorizontalAlignment="Left" Height="30" Margin="110,130,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="220" BorderThickness="0,0,0,2" FontSize="14" TabIndex="2" CharacterCasing="Upper"/>
+                <PasswordBox x:Name="signUpPBPassword" HorizontalAlignment="Left" Height="30" Margin="110,170,0,0" VerticalAlignment="Top" Width="220" BorderThickness="0,0,0,2" FontSize="14" TabIndex="3"/>
+                <Label Content="UserId" HorizontalAlignment="Left" Height="31" Margin="20,90,0,0" VerticalAlignment="Top" Width="82" FontSize="16" Foreground="#FF585858"/>
+                <Label Content="Full Name" HorizontalAlignment="Left" Height="31" Margin="20,130,0,0" VerticalAlignment="Top" Width="84" Foreground="#FF585858" FontSize="16"/>
+                <Label Content="Password" HorizontalAlignment="Left" Height="31" Margin="20,170,0,0" VerticalAlignment="Top" Width="82" Foreground="#FF585858" FontSize="16"/>
+                <Label x:Name="errorLabel" Content="Please fill in all the fields*" HorizontalAlignment="Left" Height="30" Margin="110,60,0,0" VerticalAlignment="Top" Width="217" Background="{x:Null}" Foreground="#FFD9534F" FontSize="14" Visibility="Hidden"/>
+                <Button x:Name="exitButton2" Content="Exit" HorizontalAlignment="Left" Height="30" Margin="120,250,0,0" VerticalAlignment="Top" Width="80" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF585858" FontSize="14" Click="exitButton2_Click" TabIndex="6"/>
+                <Button x:Name="logInlinkButton2" Content="Back to login" HorizontalAlignment="Left" Margin="20,210,0,0" VerticalAlignment="Top" Width="90" Height="30" Foreground="#FF0275D8" FontSize="14" TabIndex="4" Click="logInlinkButton2_Click">
+                    <Button.Background>
+                        <SolidColorBrush Color="#FFEEF4F9" Opacity="0"/>
+                    </Button.Background>
+                    <Button.BorderBrush>
+                        <SolidColorBrush Color="#FF707070" Opacity="0"/>
+                    </Button.BorderBrush>
+                </Button>
+            </Grid>
+            <Label x:Name="loggingInLabel" Content="Please wait, logging In..." Margin="0,130,0,0" Grid.Row="1" VerticalAlignment="Top" Foreground="#FF0275D8" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="16" Visibility="Hidden"/>
+        </Grid>
+
+    </Grid>
+</Window>
