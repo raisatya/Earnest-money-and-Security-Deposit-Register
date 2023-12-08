@@ -1,3 +1,3 @@
 # Earnest-money-and-Security-Deposit-Register
 
-# Written in C#
+# Written in Visual C#
